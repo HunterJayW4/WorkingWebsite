@@ -3,6 +3,9 @@
 
 <html>
     <link rel="stylesheet" href="Style.css">
+    <head>
+        <link rel="icon" type="image/x-icon" href="https://cdni.iconscout.com/illustration/premium/thumb/man-surfing-in-sea-6210638-5121889.png">
+    </head>
         <body>
             <p>
                 This is the about page for Idaho River Shorts, which is still under construction. There will be a somewhat

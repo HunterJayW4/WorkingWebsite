@@ -4,6 +4,9 @@
 <html>
     <link rel="stylesheet" href="Style.css">
     <title>Idaho River Shorts - Shop</title>
+    <head>
+        <link rel="icon" type="image/x-icon" href="https://cdni.iconscout.com/illustration/premium/thumb/man-surfing-in-sea-6210638-5121889.png">
+    </head>
     <body>
         <div id="SexSelect">
             <div id="waves">

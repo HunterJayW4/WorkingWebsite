@@ -10,15 +10,21 @@
         <br>
         Phone: 208 - 336 - 4844
         <br>
+        <br>
         Email: www.idahorivershorts@gmail.com
+        <br>
         <br>
         Fax: 208 - 123 -4567
         <br>
+        <br>
         Snapchat: IRSIsTheBest
+        <br>
         <br>
         Instagram: IdahoRiverShorts
         <br>
+        <br>
         WhatsApp: IRSshorts
+        <br>
         <br>
         FaceBook: IdahoRiverShorts
         <br>

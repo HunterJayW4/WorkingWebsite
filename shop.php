@@ -18,5 +18,15 @@
                 </div>
             </div>
         </div>
+    <p>
+        To navigate the shop, the user will be able to click on either the man or woman surfing and
+        the page will display either men's or women's shorts. As I wanted to make sure that this website
+        was online on Heroku, I didn't get to finish this implementation. As of now, clicking on either
+        image just redirects back to the shop page. I'm still deciding if I want to create two seperate pages
+        for men's and women's or try to use php to display them on the same page. I think creating two different
+        pages will be easier, so that's what I will likely do.
+
+        Also, I still need to add a shopping cart page and make that system functional.
+    </p>
     </body>
 </html>

@@ -25,7 +25,8 @@
         image just redirects back to the shop page. I'm still deciding if I want to create two seperate pages
         for men's and women's or try to use php to display them on the same page. I think creating two different
         pages will be easier, so that's what I will likely do.
-
+        <br>
+        <br>
         Also, I still need to add a shopping cart page and make that system functional.
     </p>
     </body>

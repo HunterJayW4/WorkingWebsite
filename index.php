@@ -4,6 +4,7 @@
     <title>Idaho River Shorts</title>
     <head>
         <link rel="stylesheet" href="Style.css">
+        <link rel="icon" type="image/x-icon" href="https://cdni.iconscout.com/illustration/premium/thumb/man-surfing-in-sea-6210638-5121889.png">
     </head>
 
     <link rel="icon" type="image/png" href="/Images/shorts.png">

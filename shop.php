@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-    <p>
+    <p style="padding-top: 25px">
         To navigate the shop, the user will be able to click on either the man or woman surfing and
         the page will display either men's or women's shorts. As I wanted to make sure that this website
         was online on Heroku, I didn't get to finish this implementation. As of now, clicking on either

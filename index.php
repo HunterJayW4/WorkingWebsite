@@ -13,8 +13,8 @@
         <p id="HomeP">
                 At Idaho River Sports, we value quality over anything else. We sell only the highest quality fabrics
                 and garments. We have a deep rooted passion for all things shorts. It doesn't matter if it's a 10 inch
-                inseam, where the shorts are bordering on capris, or a 2 inch inseam risking ball exposure, we love it
-                all.  <br><br> "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                inseam, where the shorts are bordering on capris, or a 2 inch inseam that might be showing off a little more
+                than they should.<br><br> "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
                 deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
                 similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum
                 quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio

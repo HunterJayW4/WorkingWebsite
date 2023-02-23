@@ -1,0 +1,112 @@
+#Header {
+    color: white;
+    background-color: rgb(15, 50, 55);
+    padding: 40px 60px 40px 60px;
+}
+
+#HeaderRec {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#Logo {
+    height: auto;
+    width: 15%;
+}
+
+#Cart {
+    height: auto;
+    width: 4%;
+    float: right;
+}
+
+#Nav {
+    background-color: rgb(15, 50, 55);
+    align-content: center;
+}
+
+.nav {
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+body {
+    background-color: floralwhite;
+    margin-bottom: 10px;
+}
+
+.nav li {
+    display: inline-block;
+    font-family: 'Open-Sans', sans-serif;
+    font-size: 25px;
+}
+
+.nav a {
+    display:inline-block;
+    padding:25px;
+    width: 80px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav a:hover {
+    background-color: #555;
+    color: white;
+}
+
+#HomeP {
+    font-size: 1.5rem;
+    color: rgb(46, 46, 46);
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+
+#homeIMG {
+    padding-right: 10px;
+    float:left;
+    height: auto;
+    width: 25%;
+}
+
+hr {
+    margin: 0px;
+    color: white;
+}
+
+#Man {
+    display: inline;
+    float: left;
+    position: absolute;
+    right: 50px;
+    z-index: 2;
+}
+
+#Woman {
+    display: inline;
+    float: right;
+    position: absolute;
+    left: 50px;
+    z-index: 2;
+}
+
+#SexSelect {
+    margin-top: 125px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+ }
+
+#waves {
+    vertical-align: middle;
+    position: absolute;
+    z-index: 1;
+    padding-left: 50px;
+    padding-right: 50px;
+}

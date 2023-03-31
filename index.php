@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" href="/Images/shorts.png">
     <body>
     <img src="Images/VerticalRiver.jpg", alt="riverImage", id="homeIMG">
-        <p id="HomeP">
-                At Idaho River Sports, we value quality over anything else. We sell only the highest quality fabrics
+	<p id="HomeP">
+                At Idaho River Shorts, we value quality over anything else. We sell only the highest quality fabrics
                 and garments. We have a deep rooted passion for all things shorts. It doesn't matter if it's a 10 inch
                 inseam, where the shorts are bordering on capris, or a 2 inch inseam that might be showing off a little more
                 than they should.<br><br> "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
@@ -26,4 +26,7 @@
             </p>
         </div>
     </body>
+    <footer>
+        
+    </footer>
 </html>

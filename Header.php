@@ -3,7 +3,10 @@
         <div id="Header">
             <div id="HeaderRec">
                 <img src= "Images/logoTemp2.png" alt="logo" id = "Logo">
-                <img src= "Images/cart.png" alt="ShoppingCart" id = "Cart">
+                <img src= "Images/cart.png" alt="ShoppingCart", class="Cart" onclick="location.href='Cart.php';">
+                <div id="signDiv">
+                    <h1 id="signin">SIGN IN</h1>
+                </div>
             </div>
         </div>
         <hr>

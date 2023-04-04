@@ -3,10 +3,10 @@
 // class for saving and getting comments from MySQL
 class Dao {
 
-    private $host = "localhost";
-    private $db = "shop";
-    private $user = "hunty";
-    private $pass = "Hunt2009";
+    private $host = "us-cdbr-east-06.cleardb.net";
+    private $db = "heroku_cdd3dc0f38f2d59";
+    private $user = "bf7f5793fed85c";
+    private $pass = "8bbb6ec3";
 
     public function getConnection () {
         return
@@ -36,6 +36,13 @@ class Dao {
         $password = $conn->query("SELECT pass FROM users WHERE user LIKE 'hunty'")->fetchAll(PDO::FETCH_ASSOC);
         return $password;
     }
+
+    public function newUser($user, $pass)
+    {
+        $conn = this->getConnection();
+        $conn->query("INSERT INTO users(user, pass) VALUES('$user', '$pass');");
+    }
+
 
 
 

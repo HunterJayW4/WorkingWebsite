@@ -25,7 +25,7 @@ require_once("KLogger.php");
             </form>
             <form method="POST" action="loginGuest.php" class="login">
                 <button class="button login__submit">
-                    <div class="button__text" input type="submit" value="Submit">Log in as Guest</div>
+                    <div class="button__text" input type="submit" value="Submit">Continue as Guest</div>
                 </button>
             </form>
             <form action="createAccount.php" class="login">

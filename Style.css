@@ -1,6 +1,6 @@
 #Header {
     color: white;
-    background-color: rgb(80, 144, 186);
+    background: linear-gradient(90deg, rgb(15,50,55), rgb(15,47,68));
     padding: 40px 60px 40px 60px;
 }
 
@@ -25,7 +25,7 @@
 }
 
 #Nav {
-    background-color: rgb(69, 129, 168);
+    background: linear-gradient(90deg, rgb(15,50,55), rgb(15,47,68));
     align-content: center;
 }
 
@@ -37,18 +37,29 @@
     text-align:center;
 }
 
-#signDiv {
+.signDiv {
     cursor: pointer;
     float: right;
-    margin-right: 25px;
+    margin-right: 40px;
+    margin-top: 25px;
+    text-align: center;
+    transform: scale(1.5);
 }
 
 #signDiv:hover {
-    background-color: rgb(10, 45, 50);
+    background-color: rgb(69, 129, 168);
+    box-sizing: border-box;
+    border: 3px solid lightgray;
+    text-align: center;
 }
 
 #signin {
     font-size: 20px
+}
+
+#logout {
+    font-size: 12px;
+    color: white;
 }
 
 body {
@@ -106,7 +117,7 @@ hr {
     color: white;
 }
 
-#Man {
+.Man {
     display: inline;
     float: left;
     position: absolute;
@@ -119,12 +130,13 @@ hr {
 }
 
 
-#Man:hover {
+.Man:hover {
     background-image: url("Images/MSurfShadow.png");
     cursor: pointer;
 }
 
-#Woman {
+
+.Woman {
     display: inline;
     float: right;
     position: absolute;
@@ -136,7 +148,7 @@ hr {
     background-size: 300px;
 }
 
-#Woman:hover {
+.Woman:hover {
     background-image: url("Images/WSurfShadow.png");
     cursor: pointer;
 }
@@ -194,6 +206,8 @@ div.text {
     border: 3px solid lightgray;
     margin-left: 25px;
     margin-right: 25px;
+    margin-top: 25px;
+    margin-botton: 25px;
     height: 300px;
     text-underline: darkgray;
 }
@@ -206,8 +220,12 @@ div.text {
 
 .cartOverlay {
     width: 250px;
-    display: inline;
+    display: none;
     position: fixed;
+}
+
+.cartOverlay:hover {
+    display: inline;
 }
 
 .cartOverlay:hover {

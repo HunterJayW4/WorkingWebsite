@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if (!isset($_SESSION['auth'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <?php include("Header.php");
 require_once('DAO.php');
 ?>
@@ -15,35 +23,21 @@ require_once('DAO.php');
     <div id="waves">
         <img src="Images/bye.png", style="float: left", id="invWave">
         <div id="Gender">
-            <div onclick="location.href='Men.php';" id="Man"></div>
-            <div onclick="location.href='Women.php'" id="Woman"></div>
+            <div onclick="location.href='Men.php';" class="Man">
+                <style>
+                    .Man {background-image: url("Images/MSurfSelect.png");}
+                </style>
+            </div>
+            <div onclick="location.href='Women.php'" class="Woman"></div>
         </div>
     </div>
 </div>
 <div class="shopping">
     <h1 class="shopHeader">MEN'S SHORTS</h1>
     <div class="items">
-        <?php
-        if(isset($_SESSION['message'])) {
-            echo "<div id='message'>" . $_SESSION['message'] . "</div>";
-            unset($_SESSION['message']);
-        }
-        ?>
 
         <?php
 
-
-
-
-
-
-//        $short0 = array("Yellow Shorts", 12.99);
-//        $short1 = array("Green Shorts", 12.99);
-//        $short2 = array("Beige Shorts", 12.99);
-//        $short3 = array("Blue Shorts", 12.99);
-//        $short4 = array("Lime Shorts", 12.99);
-//
-//        $shortsArray = array($short0, $short1, $short2, $short3, $short4);
 
         $dao = new DAO();
         $all = $dao->getMens();
@@ -63,8 +57,6 @@ require_once('DAO.php');
             echo '</div>';
             echo '</div>';
         }
-
-
         ?>
     </div>
 

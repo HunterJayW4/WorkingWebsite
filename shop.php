@@ -1,6 +1,16 @@
 
 <!DOCTYPE html>
+
+<?php
+session_start();
+if (!isset($_SESSION['auth'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <?php include("Header.php"); ?>
+<?php include_once("DAO.php"); ?>
 
 <html>
 <link rel="stylesheet" href="Style.css">
@@ -12,22 +22,58 @@
 <div id="SexSelect">
     <div id="waves">
         <img src="Images/bye.png", style="float: left", id="invWave">
-        <div id="Gender">
-            <div onclick="location.href='Men.php';" id="Man"></div>
-            <div onclick="location.href='Women.php'" id="Woman"></div>
-        </div>
+        <div onclick="location.href='Men.php';" class="Man"></div>
+        <div onclick="location.href='Women.php'" class="Woman"></div>
     </div>
 </div>
-<p style="padding-top: 150px">
-    To navigate the shop, the user will be able to click on either the man or woman surfing and
-    the page will display either men's or women's shorts. As I wanted to make sure that this website
-    was online on Heroku, I didn't get to finish this implementation. As of now, clicking on either
-    image just redirects back to the shop page. I'm still deciding if I want to create two seperate pages
-    for men's and women's or try to use php to display them on the same page. I think creating two different
-    pages will be easier, so that's what I will likely do.
-    <br>
-    <br>
-    Also, I still need to add a shopping cart page and make that system functional.
-</p>
+<div class="shopping">
+    <div class="items">
+
+        <?php
+
+
+        $dao = new DAO();
+        $all = $dao->getMens();
+        foreach($all as $shorts)
+        {
+            $url = $shorts['pics'];
+            $url = "'".$url."'";
+            $urlString = '<img src='.$url.', class="item">';
+
+            echo '<div class="itemBlock">';
+            echo '<img src=\'Images/cart.jpg\', class="cartOverlay">';
+            echo $urlString;
+            echo '<div class="text">';
+
+            echo $shorts['item']." $".$shorts['price'];
+
+            echo '</div>';
+            echo '</div>';
+        }
+
+        $dao = new DAO();
+        $all = $dao->getWomens();
+        foreach($all as $shorts)
+        {
+            $url = $shorts['pics'];
+            $url = "'".$url."'";
+            $urlString = '<img src='.$url.', class="item">';
+
+            echo '<div class="itemBlock">';
+            echo '<img src=\'Images/cart.jpg\', class="cartOverlay">';
+            echo $urlString;
+            echo '<div class="text">';
+
+            echo $shorts['item']." $".$shorts['price'];
+
+            echo '</div>';
+            echo '</div>';
+        }
+
+
+        ?>
+    </div>
+
+</div>
 </body>
 </html>

@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<?php
+session_start();
+if (!isset($_SESSION['auth'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <?php include("Header.php"); ?>
 <?php require_once("DAO.php");?>
 
@@ -13,20 +22,18 @@
     <div id="waves">
         <img src="Images/bye.png", style="float: left", id="invWave">
         <div id="Gender">
-            <div onclick="location.href='Men.php';" id="Man"></div>
-            <div onclick="location.href='Women.php'" id="Woman"></div>
+            <div onclick="location.href='Men.php';" class="Man"></div>
+            <div onclick="location.href='Women.php'" class="Woman">
+                <style>
+                    .Woman {background-image: url("Images/WSurfSelect.png");}
+                </style>
+            </div>
         </div>
     </div>
 </div>
 <div class="shopping">
-    <h1 class="shopHeader">WOMEN'S HOT ITEMS</h1>
+    <h1 class="shopHeader">WOMEN'S SHORTS</h1>
     <div class="items">
-        <?php
-        if(isset($_SESSION['message'])) {
-            echo "<div id='message'>" . $_SESSION['message'] . "</div>";
-            unset($_SESSION['message']);
-        }
-        ?>
 
         <?php
 

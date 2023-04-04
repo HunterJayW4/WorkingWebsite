@@ -30,17 +30,16 @@ class Dao {
         return $password;
     }
 
-    public function testGet()
-    {
-        $conn = $this->getConnection();
-        $password = $conn->query("SELECT pass FROM users WHERE user LIKE 'hunty'")->fetchAll(PDO::FETCH_ASSOC);
-        return $password;
-    }
 
-    public function newUser($user, $pass)
+    public function newUser($username, $password)
     {
-        $conn = this->getConnection();
-        $conn->query("INSERT INTO users(user, pass) VALUES('$user', '$pass');");
+        $user = $username;
+        $pass = $password;
+        $conn = $this->getConnection();
+        $sql = $conn->prepare("INSERT INTO users (user, pass) VALUES (:user, :pass)");
+        $sql->bindParam(":user", $user);
+        $sql->bindParam(":pass", $pass);
+        $sql->execute();
     }
 
 

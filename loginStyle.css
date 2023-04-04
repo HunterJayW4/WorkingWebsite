@@ -76,6 +76,14 @@ body {
     border-radius: 32px;
 }
 
+
+.warning {
+    color: white;
+    margin-top: 25px;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+}
+
 .screen__background__shape4 {
     height: 400px;
     width: 200px;

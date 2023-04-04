@@ -6,13 +6,20 @@ $logger = new KLogger ("log.txt" , KLogger::WARN);
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+$second = $_POST['secondpassword'];
+
+if ($password != $second)
+{
+    header("Location: createAccount.php");
+    $_SESSION['mesasage']='PASSWORDS MUST MATCH';
+    exit();
+}
+
 $logger->LogDebug("User [{$username}] attempting to log in");
 
 $dao = new DAO();
-try {
-    $dao->newUser($username, $password);
-}
-catch (Exception $e) {
+$dao->newUser($username, $password);
+header("Location: login.php");
 
-}
+
 exit();

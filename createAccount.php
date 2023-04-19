@@ -26,7 +26,7 @@ session_start();
                     <span class="button__text" input type="submit" value="Submit">Create Account</span>
                 </button>
                 <div class="warning">
-                    <?php echo $_SESSION['message']; ?>
+                    <?php echo $_SESSION['error']; ?>
                 </div>
             </form>
         </div>

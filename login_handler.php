@@ -5,6 +5,7 @@ require_once 'DAO.php';
 $logger = new KLogger ("log.txt" , KLogger::WARN);
 
 $username = $_POST['username'];
+$_SESSION['username'] = $username;
 $password = $_POST['password'];
 $logger->LogDebug("User [{$username}] attempting to log in");
 

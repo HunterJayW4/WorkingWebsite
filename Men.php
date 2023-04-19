@@ -21,6 +21,7 @@ require_once('DAO.php');
 <body>
 <div id="SexSelect">
     <div id="waves">
+
         <img src="Images/bye.png", style="float: left", id="invWave">
         <div id="Gender">
             <div onclick="location.href='Men.php';" class="Man">
@@ -38,7 +39,6 @@ require_once('DAO.php');
 
         <?php
 
-
         $dao = new DAO();
         $all = $dao->getMens();
         foreach($all as $shorts)
@@ -48,13 +48,25 @@ require_once('DAO.php');
             $urlString = '<img src='.$url.', class="item">';
 
             echo '<div class="itemBlock">';
-            echo '<img src=\'Images/cart.jpg\', class="cartOverlay">';
-            echo $urlString;
-            echo '<div class="text">';
+                echo $urlString;
+                echo '<div class="text">';
+                    echo $shorts['item']." $".$shorts['price'];
+                 echo '</div>';
 
-            echo $shorts['item']." $".$shorts['price'];
+//            echo '<form class="cart" method="post" action="cartManager.php">';
+//                    echo '<div id="addTo">';
+//                        echo '<button class="button login__submit" type="submit" name="short")>';
+//                        echo '<span class="button__text" onclick="alert(\'Item added to shopping cart.\')">Add To Cart</span>';
+//                        echo '</button>';
+//                    echo '</div>';
+//            echo '</form>';
 
-            echo '</div>';
+            echo '<form class="cart" method="post" action = "cartManager.php">';
+            $id = $shorts['id'].';'.$_SESSION['user'];
+                echo '<button class="button login__submit" type ="submit" name="short" value='.$id.'>ADD TO CART</button>';
+                echo $dao->getCart($_SESSION['user']);
+            echo '</form>';
+
             echo '</div>';
         }
         ?>

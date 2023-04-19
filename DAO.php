@@ -30,6 +30,42 @@ class Dao {
         return $password;
     }
 
+    public function addToCart($username, $item)
+    {
+        $conn = $this->getConnection();
+        $sql = $conn->prepare("UPDATE users SET cart = :it WHERE user LIKE :us");
+        $sql->bindParam(":us", $username);
+        $sql->bindParam(":it", $item);
+        $sql->execute();
+    }
+
+    public function getCart($username)
+    {
+        $user = strval($username);
+        echo $user;
+        $conn = $this->getConnection();
+        $sql = $conn->query("SELECT cart FROM users WHERE user LIKE :us")->fetchAll(PDO::FETCH_ASSOC);
+        $sql->bindParam(":us", $user);
+        foreach ($sql as $item)
+        {
+            return $item['cart'];
+        }
+    }
+
+    public function getItem($num)
+    {
+        $conn = this->getConnection();
+        $sql = $conn->query("SELECT * FROM items WHERE id LIKE '")->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    public function addShort()
+    {
+        $conn = $this->getConnection();
+        $query =  $conn->query("UPDATE users SET cart=\"test1\" WHERE user LIKE 'hunty';");
+    }
+
+
 
     public function newUser($username, $password)
     {
@@ -41,6 +77,7 @@ class Dao {
         $sql->bindParam(":pass", $pass);
         $sql->execute();
     }
+
 
 
 

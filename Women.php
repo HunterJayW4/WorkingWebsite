@@ -53,6 +53,9 @@ if (!isset($_SESSION['auth'])) {
             echo $shorts['item']." $".$shorts['price'];
 
             echo '</div>';
+            echo '<div id="addTo">';
+            echo  'ADD TO CART';
+            echo '</div>';
             echo '</div>';
         }
 

@@ -8,11 +8,13 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $second = $_POST['secondpassword'];
 
+
+
 if ($password != $second)
 {
     header("Location: createAccount.php");
-    $_SESSION['mesasage']='PASSWORDS MUST MATCH';
-    exit();
+    $_SESSION['error']='PASSWORDS MUST MATCH';
+    exit($_SESSION['error']);
 }
 
 $logger->LogDebug("User [{$username}] attempting to log in");
